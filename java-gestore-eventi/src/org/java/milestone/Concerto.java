@@ -24,7 +24,7 @@ public LocalTime getOra() {
 
 public void setOra(LocalTime ora){
     if (ora.isBefore(LocalTime.now())) {
-        throw new IllegalArgumentException("L'ora selezionata e gia passata")
+        throw new IllegalArgumentException("L'ora selezionata e gia passata");
     } else {
         this.ora = ora;
     }
@@ -51,6 +51,6 @@ public String getPrezzoFormattato() {
 
 @Override
 public String toString() {
-    return getDataOra() + "-" + getTitolo() + "-" + getPrezzoFormattato()
+    return getDataOra() + "-" + getTitolo() + "-" + getPrezzoFormattato();
 }
 }
