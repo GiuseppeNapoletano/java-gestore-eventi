@@ -42,7 +42,7 @@ public class Evento {
     }
 
 
-    public String getDate() {
+    public String getData() {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
