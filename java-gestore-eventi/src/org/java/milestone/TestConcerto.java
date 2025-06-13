@@ -55,20 +55,15 @@ public static void main(String[] args) {
 
         LocalTime ora = null;
         DateTimeFormatter formatoOra = DateTimeFormatter.ofPattern("HH:mm");
-        while (ora == null) {
+
             System.out.println("Inserisci l'ora (HH:mm): ");
             String oraInput = scanner.nextLine();
             try {
-                LocalTime oraFormattata = LocalTime.parse(oraInput, formatoOra);
-                if (oraFormattata.isBefore(LocalTime.now())) {
-                    System.out.println("Inserisci un orario non passato");
-                } else {
-                    ora = oraFormattata;
-                } 
+                ora = LocalTime.parse(oraInput, formatoOra);
             } catch (DateTimeParseException e) {
                     System.out.println("Inserire l'ora nel formato sopraindicato");
                 }
-            }
+            
 
         BigDecimal prezzo = null;
         while (prezzo == null) {
